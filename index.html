@@ -7,21 +7,69 @@
     <title>Custom OS Showcase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/penguin.png" type="image/png">
 </head>
 
 <body>
     <div class="container">
         <header>
             <h1><i class="fas fa-desktop"></i> Penguin OS Showcase</h1>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#specs"><i class="fas fa-list"></i> Specs</a></li>
+                    <li><a href="#video"><i class="fas fa-play"></i> Video</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Documentation</a></li>
+                    <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+                </ul>
+            </nav>
             <p class="subtitle">Demonstrasi lengkap dari sistem operasi kustom yang telah dikembangkan. Tampilkan fitur,
-                antarmuka, dan kemampuan unik OS Anda melalui galeri gambar dan video.</p>
+                antarmuka, dan kemampuan unik OS melalui galeri gambar dan video.</p>
         </header>
 
         <main class="main-content">
-            <section class="video-container">
+            <section class="specs-container" id="specs">
+                <h2 class="section-title"><i class="fas fa-microchip"></i> Spesifikasi Sistem</h2>
+                <div class="specs-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Specification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kernel</td>
+                                <td>Linux 5.10.0-8-amd64 (LTS)</td>
+                            </tr>
+                            <tr>
+                                <td>Shell</td>
+                                <td>Bash 5.1.4</td>
+                            </tr>
+                            <tr>
+                                <td>Theme</td>
+                                <td>Arc-Dark (GTK3/4)</td>
+                            </tr>
+                            <tr>
+                                <td>Icons</td>
+                                <td>Papirus-Dark Adapter</td>
+                            </tr>
+                            <tr>
+                                <td>Resolution</td>
+                                <td>1920x1080 (Boot), Dynamic (Desktop)</td>
+                            </tr>
+                            <tr>
+                                <td>Bootloader</td>
+                                <td>GRUB 2.06 Custom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="video-container" id="video">
                 <h2 class="section-title"><i class="fas fa-play-circle"></i> Video Demonstrasi</h2>
                 <div class="video-wrapper">
-                    <!-- Ganti VIDEO_ID dengan ID video YouTube Anda -->
                     <iframe src="https://www.youtube.com/embed/5FfUMrtpYyg" title="Penguin OS Demo Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
@@ -33,9 +81,9 @@
                 </div>
             </section>
 
-            <section class="gallery-container">
+            <section class="gallery-container" id="gallery">
                 <h2 class="section-title"><i class="fas fa-images"></i> Galeri Screenshot</h2>
-                <div class="gallery-grid" id="gallery">
+                <div class="gallery-grid" id="gallery-grid">
                     <!-- Gambar-gambar custom OS akan ditampilkan di sini -->
                     <!-- Ganti src dengan URL gambar custom OS Anda -->
                     <div class="gallery-item">
@@ -94,7 +142,7 @@
                 </div>
             </section>
 
-            <section class="features-container">
+            <section class="features-container" id="team">
                 <h2 class="section-title"><i class="fas fa-users"></i> Anggota Kelompok</h2>
                 <div class="features">
                     <div class="feature-item">
@@ -141,9 +189,10 @@
         </main>
 
         <footer>
-            <p>&copy; 2023 Custom OS Showcase. Dibuat dengan <i class="fas fa-heart" style="color:#e94560;"></i> untuk
+            <p>&copy; 2025 Penguin OS Showcase. Dibuat dengan <i class="fas fa-heart" style="color:#e94560;"></i> untuk
                 menampilkan proyek sistem operasi kustom.</p>
-            <p style="margin-top: 10px;">Semua screenshot dan video adalah milik <span class="os-name">CustomOS</span>.
+            <p style="margin-top: 10px;">Semua screenshot dan video adalah milik <span class="os-name">Penguin
+                    OS</span>.
             </p>
         </footer>
     </div>

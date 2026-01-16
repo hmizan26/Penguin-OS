@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -270,4 +274,127 @@ footer {
             grid-template-columns: 1fr;
         }
     }
+}
+
+/* Navigation Styles */
+.main-nav {
+    background: rgba(13, 25, 48, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #a9b7c6;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #e94560;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links li a:hover {
+    color: #e94560;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(233, 69, 96, 0.4);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover i {
+    transform: scale(1.2);
+}
+
+/* Specs Table Styles */
+.specs-container {
+    background: #0d1930;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.specs-container:hover {
+    transform: translateY(-5px);
+}
+
+.specs-wrapper {
+    overflow-x: auto;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.specs-table th,
+.specs-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #16213e;
+}
+
+.specs-table th {
+    color: #e94560;
+    font-weight: 600;
+    background-color: #1a1a2e;
+    border-radius: 5px 5px 0 0;
+}
+
+.specs-table tr:last-child td {
+    border-bottom: none;
+}
+
+.specs-table tr:hover td {
+    background-color: #16213e;
+}
+
+.specs-table td:first-child {
+    color: #a9b7c6;
+    font-weight: 500;
+    width: 30%;
+}
+
+.specs-table td:last-child {
+    color: #f0f0f0;
+    font-family: "Cascadia Code", "Courier New", monospace;
 }
